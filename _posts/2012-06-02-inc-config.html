@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Inc/config.php
-permalink: Incconfigphp.html
+title: inc/config.php
+permalink: inc-config.html
 category: Other Topics
 ---
 <p>The <b>inc/config.php</b> file stores the database information, and various global configuration settings.  This file is written during the <a href="{{ site.url }}/Installing.html" title="Installing">installation</a>, so it is not necessary to create this file yourself.
@@ -12,7 +12,7 @@ category: Other Topics
 <li class="toclevel-1 tocsection-1"><a href="#Sample"><span class="tocnumber">1</span> <span class="toctext">Sample</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Database_Configuration"><span class="tocnumber">2</span> <span class="toctext">Database Configuration</span></a></li>
 <li class="toclevel-1 tocsection-3"><a href="#Admin_CP_URL"><span class="tocnumber">3</span> <span class="toctext">Admin CP URL</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Hide_Admin_CP_links"><span class="tocnumber">4</span> <span class="toctext">Hide Admin CP links</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Hide_Admin_CP_Links"><span class="tocnumber">4</span> <span class="toctext">Hide Admin CP Links</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Datacache_Configuration"><span class="tocnumber">5</span> <span class="toctext">Datacache Configuration</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#Super_Administrators"><span class="tocnumber">6</span> <span class="toctext">Super Administrators</span></a></li>
 <li class="toclevel-1 tocsection-7"><a href="#Database_Encoding"><span class="tocnumber">7</span> <span class="toctext">Database Encoding</span></a></li>
@@ -22,6 +22,7 @@ category: Other Topics
 
 <p>This is a sample inc/config.php if you have accidentally overwritten your existing one.
 </p>
+<h2><span class="mw-headline" id="Sample"> Sample </span></h2>
 <pre>
 &lt;?php
 /**
@@ -112,6 +113,7 @@ $config['log_pruning'] = array(
 ?&gt;
 </pre>
 
+<h2><span class="mw-headline" id="Database_Configuration"> Database Configuration </span></h2>
 <dl><dt>$config['dbtype']</dt><dd> This is the database driver that is used for your board.  mysql, mysqli, sqlite2, sqlite3 and postgresql are supported.
 </dd><dt>$config['hostname']</dt><dd> This is the hostname to your database server
 </dd><dt>$config['username']</dt><dd> This is the username to connect to your database server.
@@ -120,21 +122,27 @@ $config['log_pruning'] = array(
 </dd><dt>$config['db_encoding']</dt><dd> This is the database encoding used interpret characters
 </dd></dl>
 
+<h2><span class="mw-headline" id="Admin_CP_URL"> Admin CP URL </span></h2>
 <dl><dt>$config['admindir']</dt><dd> If you are changing your Admin CP folder name, you should change this to the name of that renamed directory (without preceding or trailing slash).
 </dd></dl>
 
+<h2><span class="mw-headline" id="Hide_Admin_CP_Links"> Hide Admin CP Links </span></h2>
 <dl><dt>$config['hide_admin_links']</dt><dd> If you wish to hide all Admin CP links on the front end of the board after renaming your Admin CP directory, set this to 1.
 </dd></dl>
 
+<h2><span class="mw-headline" id="Datacache_Configuration"> Datacache Configuration </span></h2>
 <dl><dt>$config['cachestore']</dt><dd> This is the method of storing the datacaches (either 'db', 'memcache', 'eaccelerator' or 'files'). In order to use Memcache or eAccelerator, you must have them installed on your server.
 </dd></dl>
 
+<h2><span class="mw-headline" id="Super_Administrators"> Super Administrators </span></h2>
 <dl><dt>$config['super_admins']</dt><dd> A comma separated list of user IDs who cannot be edited, deleted or banned in the Admin CP. The administrator permissions for these users cannot be altered either.
 </dd></dl>
 
+<h2><span class="mw-headline" id="Database_Encoding"> Database Encoding </span></h2>
 <dl><dt>$config['db_encoding']</dt><dd> This is the database encoding used to interpret characters. For a full list of encodings see <a rel="nofollow" class="external free" href="http://dev.mysql.com/doc/refman/5.1/en/charset-mysql.html">http://dev.mysql.com/doc/refman/5.1/en/charset-mysql.html</a>
 </dd></dl>
 
+<h2><span class="mw-headline" id="Log_Pruning"> Log Pruning </span></h2>
 <p>Log pruning is stored as an array in $config['log_pruning']. For any of these, if you set it to 0, the logs will not be pruned. Otherwise, set the number of <b>days</b> before each log is pruned.
 </p>
 <dl><dt>admin_logs&#160;</dt><dd> Administrator logs. Default is 365.
