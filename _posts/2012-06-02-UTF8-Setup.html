@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Utf8 setup
-permalink: Utf8_setup.html
+title: UTF8 setup
+permalink: UTF8_Setup.html
 category: Other Topics
 ---
 <p>MyBB <b>1.2.10</b> and above feature a new set of UTF-8 tools. These tools allow users to convert their current encodings over to UTF-8 which is rapidly becoming the Unicode standard for many webmasters. However, before you can use these tools we need to make some changes to the config.php.
@@ -22,7 +22,7 @@ category: Other Topics
 </p><p>1. Look for the following lines in inc/config.php. If they do not exist go to "Adding the code". Otherwise go to "Fixing the code"
 </p>
 
-<p>2. Add the following lines right before&#160;?&gt; (located at the end of the file)
+<p id="Adding_the_code">2. Add the following lines right before&#160;?&gt; (located at the end of the file)
 </p>
 <pre>
 /**
@@ -36,7 +36,7 @@ category: Other Topics
 $config['database']['encoding'] = 'utf8';
 </pre>
 
-<p>2. Find the following line
+<p id="Fixing_the_code">2. Find the following line
 </p>
 <pre>
 // $config['database']['encoding'] = 'utf8';
@@ -47,7 +47,7 @@ $config['database']['encoding'] = 'utf8';
 $config['database']['encoding'] = 'utf8';
 </pre>
 
-<p>Save the file and upload it to your server, replacing the old inc/config.php. Now that's done, you can continue to run the UTF-8 tools in the ACP.
+<p id="What_next.3F">Save the file and upload it to your server, replacing the old inc/config.php. Now that's done, you can continue to run the UTF-8 tools in the ACP.
 </p><p><br />
 <i>Please note that once you've converted to UTF-8 there is no supported way to undo this process.</i>
 </p>
@@ -57,7 +57,7 @@ $config['database']['encoding'] = 'utf8';
 <tr>
 <td style="vertical-align: middle; font-size: 14px;"><b><a href="{{ site.url }}/Front_End.html" title="Front End">Front End</a></b>
 </td>
-<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Index_Page.html" title="Index Page">Index Page</a> - <a href="{{ site.url }}/Portal.html" title="Portal">Portal</a> - <a href="{{ site.url }}/Forum_Display.html" title="Forum Display">Forum Display</a> - <a href="{{ site.url }}/Thread_Display.html" title="Thread Display">Thread Display</a> - <a href="{{ site.url }}/Posting.html" title="Posting">Posting Threads and Replies</a> - <a href="{{ site.url }}/Searching.html" title="Searching">Searching</a> - <a href="{{ site.url }}/User_CP.html" title="User CP">User CP</a> - <a href="{{ site.url }}/Member_Profile.html" title="Member Profile">Member Profile</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Calendar.html" title="Calendar">Calendar</a> - <a href="{{ site.url }}/Member_List.html" title="Member List">Member List</a> - <a href="{{ site.url }}/Help_Docs.html" title="Help Docs">Help Docs</a> - <a href="{{ site.url }}/Who_Is_Online.html" title="Who Is Online">Who Is Online</a> - <a href="Lite_Archive_Mode.html" title="Lite (Archive) Mode">Lite (Archive) Mode</a> - <a href="{{ site.url }}/Forum_Team.html" title="Forum Team">Forum Team</a> - <a href="{{ site.url }}/Statistics.html" title="Statistics">Statistics</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/Miscellaneous_Frontend.html" title="Miscellaneous Frontend">Miscellaneous</a>
+<td style="vertical-align: middle; width: 80%;"><a href="{{ site.url }}/Index_Page.html" title="Index Page">Index Page</a> - <a href="{{ site.url }}/Portal.html" title="Portal">Portal</a> - <a href="{{ site.url }}/Forum_Display.html" title="Forum Display">Forum Display</a> - <a href="{{ site.url }}/Thread_Display.html" title="Thread Display">Thread Display</a> - <a href="{{ site.url }}/Posting.html" title="Posting">Posting Threads and Replies</a> - <a href="{{ site.url }}/Searching.html" title="Searching">Searching</a> - <a href="{{ site.url }}/User_CP.html" title="User CP">User CP</a> - <a href="{{ site.url }}/Member_Profile.html" title="Member Profile">Member Profile</a> - <a href="{{ site.url }}/Private_Messages.html" title="Private Messages">Private Messages</a> - <a href="{{ site.url }}/Calendar.html" title="Calendar">Calendar</a> - <a href="{{ site.url }}/Member_List.html" title="Member List">Member List</a> - <a href="{{ site.url }}/Help_Docs.html" title="Help Docs">Help Docs</a> - <a href="{{ site.url }}/Who_Is_Online.html" title="Who Is Online">Who Is Online</a> - <a href="Lite_Archive_Mode.html" title="Lite (Archive) Mode">Lite (Archive) Mode</a> - <a href="{{ site.url }}/Forum_Team.html" title="Forum Team">Forum Team</a> - <a href="{{ site.url }}/Statistics.html" title="Statistics">Statistics</a> - <a href="{{ site.url }}/RSS_Syndication.html" title="RSS Syndication">RSS Syndication</a> - <a href="{{ site.url }}/Miscellaneous_Front_End.html" title="Miscellaneous Front End">Miscellaneous</a>
 </td></tr></table>
 <table cellpadding="3" cellspacing="3" style="font-size: 95%; line-spacing:1; border: 1px solid #ddd; width: 100%; margin-bottom: 5px; background: #fff;">
 <tr>
