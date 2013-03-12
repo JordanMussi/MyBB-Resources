@@ -10,7 +10,7 @@ category: Other Topics
 <ul>
 <li class="toclevel-1 tocsection-1"><a href="#Built-in_support_for_eAccelerator.2C_memcached_and_X-Cache_caching"><span class="tocnumber">1</span> <span class="toctext">Built-in support for eAccelerator, memcached and X-Cache caching</span></a></li>
 <li class="toclevel-1 tocsection-2"><a href="#Delayed_thread_views_counter_updates"><span class="tocnumber">2</span> <span class="toctext">Delayed thread views counter updates</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Delayed_mass_mails_through_the_mailqueue_table"><span class="tocnumber">3</span> <span class="toctext">Delayed mass mails  through the mailqueue table</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Delayed_mass_mails_through_the_mailqueue_table"><span class="tocnumber">3</span> <span class="toctext">Delayed mass mails through the mailqueue table</span></a></li>
 <li class="toclevel-1 tocsection-4"><a href="#Master.2Fslave_database_servers_replication_support"><span class="tocnumber">4</span> <span class="toctext">Master/slave database servers replication support</span></a></li>
 <li class="toclevel-1 tocsection-5"><a href="#Server_Optimization_Options"><span class="tocnumber">5</span> <span class="toctext">Server Optimization Options</span></a></li>
 <li class="toclevel-1 tocsection-6"><a href="#Community_threads_about_performance_.26_optimization"><span class="tocnumber">6</span> <span class="toctext">Community threads about performance &amp; optimization</span></a></li>
@@ -25,14 +25,16 @@ category: Other Topics
 </p><p><br />
 </p>
 
+<h2> <span class="mw-headline" id="Delayed_thread_views_counter_updates"> Delayed thread views counter updates </span></h2>
 <p>MyBB keeps track of whenever a user views a thread to provide the number of views it's received. For larger forums, constantly updating this in the threads table meant tables were locked by the database server and posting time &amp; modification would be affected.
 </p><p>It's now possible to have the number of views a thread receives updated in batches by the automated task scheduling system. The number of views a thread receives can now optionally be updated every X minutes instead of instantly.
 </p><p><br />
 </p>
 
+<h2> <span class="mw-headline" id="Delayed_mass_mails_through_the_mailqueue_table"> Delayed mass mails through the mailqueue table </span></h2>
 <p>The <a rel="nofollow" class="external text" href="http://www.mybb.com/features/mass-mail">Mass Mail</a> functionality allows you to send messages to multiple users of your forum. Note that you can also send these messages as personal messages at the forum itself.
 </p><p>The Mass Mail Queue will show you the current messages that are queued for delivery. Note that the email delivery will run according to your settings under Tools for your MyBB installation. If you would like to force the delivery this can also be done via Tools -&gt; Task Manager -&gt; Clicking the Clock button for Mass Mail.
-</p><p>The <a href="Database_Tables-mybb_mailqueue" title="Database_Tables: mybb_mailqueue">mybb_mailqueue</a> table handle the mass mails queue.
+</p><p>The <a href="{{ site.url }}/Database_Tables-mybb_mailqueue" title="Database_Tables: mybb_mailqueue">mybb_mailqueue</a> table handle the mass mails queue.
 </p><p><br />
 </p>
 
