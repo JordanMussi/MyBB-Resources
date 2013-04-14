@@ -1,3 +1,4 @@
 auto:        true
 baseurl:    /
 url: http://docs.mybb.com
+permalink: /:title/
